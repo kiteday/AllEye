@@ -16,6 +16,8 @@
   $ python3 detect.py --weights ./runs/<best result dir>/weights/best.pt --source ./data/bus/bus-joono-video.mp4 
 ```
 
+### result
+----------------------------------------------
 ![result](./yolov5/runs/detect/exp15/bus59.jpg)
 ![result](./yolov5/runs/detect/exp15/bus62.jpg)
 ![result](./yolov5/runs/detect/exp15/bus65.jpg)
