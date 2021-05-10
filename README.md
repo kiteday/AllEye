@@ -1,1 +1,5 @@
 # AllEye
+
+```
+  $ git clone 
+```
