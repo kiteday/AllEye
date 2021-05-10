@@ -1,0 +1,81 @@
+2021-05-10 11:59:13,256 INFO    MainThread:12598 [internal.py:wandb_internal():91] W&B internal server running at pid: 12598, started at: 2021-05-10 11:59:13.256264
+2021-05-10 11:59:13,257 INFO    WriterThread:12598 [datastore.py:open_for_write():77] open: /home/r320/Desktop/joono-lab/yolov5/wandb/offline-run-20210510_115912-h59m7xou/run-h59m7xou.wandb
+2021-05-10 11:59:13,258 DEBUG   HandlerThread:12598 [handler.py:handle_request():120] handle_request: run_start
+2021-05-10 11:59:13,261 DEBUG   HandlerThread:12598 [meta.py:__init__():34] meta init
+2021-05-10 11:59:13,261 DEBUG   HandlerThread:12598 [meta.py:__init__():48] meta init done
+2021-05-10 11:59:13,261 DEBUG   HandlerThread:12598 [meta.py:probe():190] probe
+2021-05-10 11:59:13,269 DEBUG   HandlerThread:12598 [meta.py:_setup_git():180] setup git
+2021-05-10 11:59:13,283 DEBUG   HandlerThread:12598 [meta.py:_setup_git():187] setup git done
+2021-05-10 11:59:13,283 DEBUG   HandlerThread:12598 [meta.py:_save_pip():52] save pip
+2021-05-10 11:59:13,284 DEBUG   HandlerThread:12598 [meta.py:_save_pip():66] save pip done
+2021-05-10 11:59:13,284 DEBUG   HandlerThread:12598 [meta.py:probe():231] probe done
+2021-05-10 11:59:19,013 DEBUG   HandlerThread:12598 [handler.py:handle_request():120] handle_request: poll_exit
+2021-05-10 11:59:19,013 DEBUG   SenderThread:12598 [sender.py:send():160] send: exit
+2021-05-10 11:59:19,014 INFO    SenderThread:12598 [sender.py:send_exit():238] handling exit code: 1
+2021-05-10 11:59:19,014 INFO    SenderThread:12598 [sender.py:send_exit():246] send defer
+2021-05-10 11:59:19,014 DEBUG   SenderThread:12598 [sender.py:send():160] send: request
+2021-05-10 11:59:19,014 DEBUG   SenderThread:12598 [sender.py:send_request():169] send_request: poll_exit
+2021-05-10 11:59:19,015 DEBUG   HandlerThread:12598 [handler.py:handle_request():120] handle_request: defer
+2021-05-10 11:59:19,015 INFO    HandlerThread:12598 [handler.py:handle_request_defer():134] handle defer: 0
+2021-05-10 11:59:19,015 DEBUG   SenderThread:12598 [sender.py:send():160] send: request
+2021-05-10 11:59:19,015 DEBUG   SenderThread:12598 [sender.py:send_request():169] send_request: defer
+2021-05-10 11:59:19,015 INFO    SenderThread:12598 [sender.py:send_request_defer():255] handle sender defer: 0
+2021-05-10 11:59:19,015 INFO    SenderThread:12598 [sender.py:send_request_defer():291] send defer: 1
+2021-05-10 11:59:19,015 DEBUG   HandlerThread:12598 [handler.py:handle_request():120] handle_request: defer
+2021-05-10 11:59:19,015 INFO    HandlerThread:12598 [handler.py:handle_request_defer():134] handle defer: 1
+2021-05-10 11:59:19,098 DEBUG   SenderThread:12598 [sender.py:send():160] send: request
+2021-05-10 11:59:19,099 DEBUG   SenderThread:12598 [sender.py:send_request():169] send_request: defer
+2021-05-10 11:59:19,099 INFO    SenderThread:12598 [sender.py:send_request_defer():255] handle sender defer: 1
+2021-05-10 11:59:19,099 INFO    SenderThread:12598 [sender.py:send_request_defer():291] send defer: 2
+2021-05-10 11:59:19,099 DEBUG   HandlerThread:12598 [handler.py:handle_request():120] handle_request: defer
+2021-05-10 11:59:19,099 INFO    HandlerThread:12598 [handler.py:handle_request_defer():134] handle defer: 2
+2021-05-10 11:59:19,099 DEBUG   SenderThread:12598 [sender.py:send():160] send: request
+2021-05-10 11:59:19,099 DEBUG   SenderThread:12598 [sender.py:send_request():169] send_request: defer
+2021-05-10 11:59:19,099 INFO    SenderThread:12598 [sender.py:send_request_defer():255] handle sender defer: 2
+2021-05-10 11:59:19,099 INFO    SenderThread:12598 [sender.py:send_request_defer():291] send defer: 3
+2021-05-10 11:59:19,100 DEBUG   HandlerThread:12598 [handler.py:handle_request():120] handle_request: defer
+2021-05-10 11:59:19,100 INFO    HandlerThread:12598 [handler.py:handle_request_defer():134] handle defer: 3
+2021-05-10 11:59:19,100 DEBUG   SenderThread:12598 [sender.py:send():160] send: request
+2021-05-10 11:59:19,100 DEBUG   SenderThread:12598 [sender.py:send_request():169] send_request: defer
+2021-05-10 11:59:19,100 INFO    SenderThread:12598 [sender.py:send_request_defer():255] handle sender defer: 3
+2021-05-10 11:59:19,100 INFO    SenderThread:12598 [sender.py:send_request_defer():291] send defer: 4
+2021-05-10 11:59:19,100 DEBUG   HandlerThread:12598 [handler.py:handle_request():120] handle_request: defer
+2021-05-10 11:59:19,100 INFO    HandlerThread:12598 [handler.py:handle_request_defer():134] handle defer: 4
+2021-05-10 11:59:19,100 DEBUG   SenderThread:12598 [sender.py:send():160] send: request
+2021-05-10 11:59:19,100 DEBUG   SenderThread:12598 [sender.py:send_request():169] send_request: defer
+2021-05-10 11:59:19,100 INFO    SenderThread:12598 [sender.py:send_request_defer():255] handle sender defer: 4
+2021-05-10 11:59:19,100 INFO    SenderThread:12598 [sender.py:send_request_defer():291] send defer: 5
+2021-05-10 11:59:19,101 DEBUG   HandlerThread:12598 [handler.py:handle_request():120] handle_request: defer
+2021-05-10 11:59:19,101 INFO    HandlerThread:12598 [handler.py:handle_request_defer():134] handle defer: 5
+2021-05-10 11:59:19,101 DEBUG   SenderThread:12598 [sender.py:send():160] send: request
+2021-05-10 11:59:19,101 DEBUG   SenderThread:12598 [sender.py:send_request():169] send_request: defer
+2021-05-10 11:59:19,101 INFO    SenderThread:12598 [sender.py:send_request_defer():255] handle sender defer: 5
+2021-05-10 11:59:19,101 INFO    SenderThread:12598 [sender.py:send_request_defer():291] send defer: 6
+2021-05-10 11:59:19,101 DEBUG   HandlerThread:12598 [handler.py:handle_request():120] handle_request: defer
+2021-05-10 11:59:19,101 INFO    HandlerThread:12598 [handler.py:handle_request_defer():134] handle defer: 6
+2021-05-10 11:59:19,101 DEBUG   SenderThread:12598 [sender.py:send():160] send: request
+2021-05-10 11:59:19,101 DEBUG   SenderThread:12598 [sender.py:send_request():169] send_request: defer
+2021-05-10 11:59:19,102 INFO    SenderThread:12598 [sender.py:send_request_defer():255] handle sender defer: 6
+2021-05-10 11:59:19,102 INFO    SenderThread:12598 [sender.py:send_request_defer():291] send defer: 7
+2021-05-10 11:59:19,102 DEBUG   HandlerThread:12598 [handler.py:handle_request():120] handle_request: defer
+2021-05-10 11:59:19,102 INFO    HandlerThread:12598 [handler.py:handle_request_defer():134] handle defer: 7
+2021-05-10 11:59:19,102 DEBUG   SenderThread:12598 [sender.py:send():160] send: request
+2021-05-10 11:59:19,102 DEBUG   SenderThread:12598 [sender.py:send_request():169] send_request: defer
+2021-05-10 11:59:19,102 INFO    SenderThread:12598 [sender.py:send_request_defer():255] handle sender defer: 7
+2021-05-10 11:59:19,102 INFO    SenderThread:12598 [sender.py:send_request_defer():291] send defer: 8
+2021-05-10 11:59:19,103 DEBUG   HandlerThread:12598 [handler.py:handle_request():120] handle_request: defer
+2021-05-10 11:59:19,103 DEBUG   SenderThread:12598 [sender.py:send():160] send: final
+2021-05-10 11:59:19,103 INFO    HandlerThread:12598 [handler.py:handle_request_defer():134] handle defer: 8
+2021-05-10 11:59:19,103 DEBUG   SenderThread:12598 [sender.py:send():160] send: request
+2021-05-10 11:59:19,103 DEBUG   SenderThread:12598 [sender.py:send_request():169] send_request: defer
+2021-05-10 11:59:19,103 INFO    SenderThread:12598 [sender.py:send_request_defer():255] handle sender defer: 8
+2021-05-10 11:59:19,117 DEBUG   HandlerThread:12598 [handler.py:handle_request():120] handle_request: poll_exit
+2021-05-10 11:59:19,117 DEBUG   SenderThread:12598 [sender.py:send():160] send: request
+2021-05-10 11:59:19,117 DEBUG   SenderThread:12598 [sender.py:send_request():169] send_request: poll_exit
+2021-05-10 11:59:19,120 DEBUG   HandlerThread:12598 [handler.py:handle_request():120] handle_request: get_summary
+2021-05-10 11:59:19,121 DEBUG   HandlerThread:12598 [handler.py:handle_request():120] handle_request: sampled_history
+2021-05-10 11:59:19,123 DEBUG   HandlerThread:12598 [handler.py:handle_request():120] handle_request: shutdown
+2021-05-10 11:59:19,123 INFO    HandlerThread:12598 [handler.py:finish():624] shutting down handler
+2021-05-10 11:59:20,103 INFO    WriterThread:12598 [datastore.py:close():258] close: /home/r320/Desktop/joono-lab/yolov5/wandb/offline-run-20210510_115912-h59m7xou/run-h59m7xou.wandb
+2021-05-10 11:59:20,118 INFO    SenderThread:12598 [sender.py:finish():884] shutting down sender
+2021-05-10 11:59:20,120 INFO    MainThread:12598 [internal.py:handle_exit():78] Internal process exited
