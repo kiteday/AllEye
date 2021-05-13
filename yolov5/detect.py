@@ -16,7 +16,7 @@ from utils.torch_utils import select_device, load_classifier, time_synchronized
 
 
 def detect(save_img=False):
-    source, weights, view_img, save_txt, imgsz = opt.source, opt.weights, opt.view_img, opt.save_txt, opt.img_size
+    source, weights, view_img, save_txt, save_crop, imgsz = opt.source, opt.weights, opt.view_img, opt.save_txt, opt.save_crop, opt.img_size
     save_img = not opt.nosave and not source.endswith('.txt')  # save inference images
     webcam = source.isnumeric() or source.endswith('.txt') or source.lower().startswith(
         ('rtsp://', 'rtmp://', 'http://'))
@@ -88,6 +88,7 @@ def detect(save_img=False):
 
             p = Path(p)  # to Path
             save_path = str(save_dir / p.name)  # img.jpg
+            save_crop_path = str(save_dir)+'/crop_'+str(p.name)
             txt_path = str(save_dir / 'labels' / p.stem) + ('' if dataset.mode == 'image' else f'_{frame}')  # img.txt
             s += '%gx%g ' % img.shape[2:]  # print string
             gn = torch.tensor(im0.shape)[[1, 0, 1, 0]]  # normalization gain whwh
@@ -102,6 +103,35 @@ def detect(save_img=False):
 
                 # Write results
                 for *xyxy, conf, cls in reversed(det):
+                    if save_crop:
+                        c1, c2 = (int(xyxy[0]), int(xyxy[1])), (int(xyxy[2]), int(xyxy[3]))
+                        # crop
+                        im2 = im0[c1[1]:c2[1], c1[0]:c2[0], :]
+
+                        if view_img:
+                            cv2.imshow(str(p), im2)
+                            cv2.waitKey(1)  # 1 millisecond
+
+                        # Save results
+                        if save_img:
+                            if dataset.mode == 'image':
+                                cv2.imwrite(save_crop_path, im2)
+                            else:  # 'video' or 'stream'
+                                if vid_path != save_crop_path:  # new video
+                                    vid_path = save_crop_path
+                                    if isinstance(vid_writer, cv2.VideoWriter):
+                                        vid_writer.release()  # release previous video writer
+                                    if vid_cap:  # video
+                                        fps = vid_cap.get(cv2.CAP_PROP_FPS)
+                                        w = int(vid_cap.get(cv2.CAP_PROP_FRAME_WIDTH))
+                                        h = int(vid_cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
+                                    else:  # stream
+                                        fps, w, h = 30, im2.shape[1], im2.shape[0]
+                                        save_path += '.mp4'
+                                    vid_writer = cv2.VideoWriter(save_crop_path, cv2.VideoWriter_fourcc(*'mp4v'), fps,
+                                                                 (w, h))
+                                vid_writer.write(im2)
+
                     if save_txt:  # Write to file
                         xywh = (xyxy2xywh(torch.tensor(xyxy).view(1, 4)) / gn).view(-1).tolist()  # normalized xywh
                         line = (cls, *xywh, conf) if opt.save_conf else (cls, *xywh)  # label format
@@ -156,6 +186,9 @@ if __name__ == '__main__':
     parser.add_argument('--device', default='', help='cuda device, i.e. 0 or 0,1,2,3 or cpu')
     parser.add_argument('--view-img', action='store_true', help='display results')
     parser.add_argument('--save-txt', action='store_true', help='save results to *.txt')
+
+    parser.add_argument('--save-crop', action='store_true', help='save crop results')
+
     parser.add_argument('--save-conf', action='store_true', help='save confidences in --save-txt labels')
     parser.add_argument('--nosave', action='store_true', help='do not save images/videos')
     parser.add_argument('--classes', nargs='+', type=int, help='filter by class: --class 0, or --class 0 2 3')
