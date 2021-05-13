@@ -22,5 +22,7 @@
 
 ### result
 ----------------------------------------------
-![result](./yolov5/runs/detect/detect_images/bus30.jpg)
+- original image
+![result](./yolov5/runs/detect/detect_images/bus30.jpg)<br>
+- cropped image
 ![result](./yolov5/runs/detect/detect_images/crop_bus30.jpg)
