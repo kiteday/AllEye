@@ -13,11 +13,14 @@
   $ pip3 install -r requirements.txt
   $ python3 train.py --epochs <epochs> --batch-size 1 --cfg ./model/yolov5s.yalm --data ./data/bus_data.yalm --name <result directory name> 
   
+  - original
   $ python3 detect.py --weights ./runs/<best result dir>/weights/best.pt --source ./data/bus/bus-joono-video.mp4 
+  
+  - crop image save
+  $ python3 detect.py --weights ./runs/<best result dir>/weights/best.pt --source ./data/bus/bus-joono-video.mp4 --save-crop
 ```
 
 ### result
 ----------------------------------------------
 ![result](./yolov5/runs/detect/exp15/bus59.jpg)
 ![result](./yolov5/runs/detect/exp15/bus62.jpg)
-![result](./yolov5/runs/detect/exp15/bus65.jpg)
