@@ -29,7 +29,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_Form):
         openimg = QtWidgets.QFileDialog.getOpenFileName(self, 'Open File', "./", "Images(*.png *.xpm *.jpg *.gif)") # img만 불러오기
         # openimg[0]에 이미지 경로 저장
         
-        pixmap = QPixmap("SavedImage.jpg") # yolo5에서 저장한 이미지 경로 입력하여 불러오기
+        pixmap = QPixmap(openimg[0]) # yolo5에서 저장한 이미지 경로 입력하여 불러오기
         
         # output 이미지 사이즈 변환
         w = int(self.Output_img.width())
