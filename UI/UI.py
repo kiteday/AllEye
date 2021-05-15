@@ -9,6 +9,8 @@ from PyQt5.QtCore import *
 from PyQt5 import QtCore, QtGui, QtWidgets, uic
 import sys
 
+import bus_number_detect.bus_number_detect
+
 Ui_Form = uic.loadUiType("UI.ui")[0] # ui 파일 불러오기
 
 class MainWindow(QtWidgets.QMainWindow, Ui_Form):
