@@ -8,7 +8,6 @@ from PyQt5.QtCore import *
 from PyQt5 import QtCore, QtGui, QtWidgets, uic
 import sys
 
-from gtts import gTTS #음성으로 알려주는 것
 from pygame import mixer # 음성 재생
 
 Ui_Form = uic.loadUiType("AllEye_UI.ui")[0] # ui 파일 불러오기
