@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
 #pip install pyqt5
 #pip install pyqt5-tools
 from PyQt5.QtWidgets import *
@@ -8,7 +6,7 @@ from PyQt5.QtCore import *
 from PyQt5 import QtCore, QtGui, QtWidgets, uic
 import sys
 
-from pygame import mixer # 음성 재생
+import pyglet # 오디오 재생
 
 Ui_Form = uic.loadUiType("AllEye_UI.ui")[0] # ui 파일 불러오기
 
@@ -22,6 +20,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_Form):
         self.setWindowTitle("All Eye") # 시스템 이름 설정
         self.ImportImg_btn.clicked.connect(self.import_image)
         self.Audio_btn.clicked.connect(self.audio)
+        self.BusNumber_input_btn.clicked.connect(self.input_busnumber)
 
     # 파일 열기로 이미지 불러오기
     def import_image(self):
@@ -53,10 +52,13 @@ class MainWindow(QtWidgets.QMainWindow, Ui_Form):
 
     # 오디오 재생 버튼
     def audio(self):
-        # mp3 파일 밖에 못열음
-        mixer.init()
-        mixer.music.load("bus_number.mp3")
-        mixer.music.play()
+        song = pyglet.media.load('./bus_number.mp3')
+        song.play()
+        pyglet.app.run()
+
+    def input_busnumber(self):
+        global input_BN
+        input_BN = self.BusNumber_input.toPlainText() # 입력한 버스 번호 저장
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
