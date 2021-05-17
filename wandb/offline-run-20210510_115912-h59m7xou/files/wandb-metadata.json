@@ -1,0 +1,36 @@
+{
+    "os": "Linux-5.4.0-72-generic-x86_64-with-Ubuntu-18.04-bionic",
+    "python": "3.6.9",
+    "heartbeatAt": "2021-05-10T02:59:13.261363",
+    "startedAt": "2021-05-10T02:59:12.791007",
+    "docker": null,
+    "gpu": "GeForce GTX 1060 6GB",
+    "gpu_count": 1,
+    "cpu_count": 8,
+    "cuda": null,
+    "args": [
+        "--batch-size",
+        "1",
+        "--cfg",
+        "./models/yolov5s.yaml",
+        "--data",
+        "./data/bus_data.yaml",
+        "--epochs",
+        "30",
+        "--adam",
+        "--name",
+        "2021-05-10-11-58"
+    ],
+    "state": "running",
+    "program": "train.py",
+    "codePath": "train.py",
+    "git": {
+        "remote": "https://github.com/ultralytics/yolov5.git",
+        "commit": "c8c8da60792e37e2941fc27ee4d0594fcdcee34a"
+    },
+    "email": "zz1236zz@naver.com",
+    "root": "/home/r320/Desktop/joono-lab/yolov5",
+    "host": "r320-H170-Gaming-3",
+    "username": "root",
+    "executable": "/usr/bin/python3"
+}
