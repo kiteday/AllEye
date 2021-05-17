@@ -1,5 +1,0 @@
-train: ./data/bus/train
-val: ./data/bus/val
-
-nc: 1
-names: ['bus_number']
