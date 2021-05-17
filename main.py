@@ -30,6 +30,7 @@ if __name__ == '__main__':
     if crop_img_path:
         text = bus_number_detect.parse_image(crop_img_path)
     else:
+        text = ''
         assert 'image가 존재하지 않습니다.'
 
     text_path = result_path + 'busnumber.mp3'
@@ -41,4 +42,3 @@ if __name__ == '__main__':
     '''
     text_path에 있는 mp3 파일로 음성 출력 버튼 만들어 주세요!
     '''
-
